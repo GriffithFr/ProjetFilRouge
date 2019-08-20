@@ -31,6 +31,14 @@ public class Article implements Serializable {
         return id;
     }
     
+    
+//     // MappedBy pour dire que la liste film pointe vers la liste réalisateur et qu'ils ont la table intermédiaire commune
+//    @ManyToMany(mappedBy = "realisateurs")
+//    private List<Film> films = new ArrayList<>();
+    
+    
+    
+    
     @Temporal(TemporalType.TIMESTAMP)
     private Date articleDate;
     
