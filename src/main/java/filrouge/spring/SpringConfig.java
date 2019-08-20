@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ProjetFilRouge.spring;
+package filrouge.spring;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -22,7 +22,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 @Configuration
 //@SpringBootApplication
 //@EnableAutoConfiguration
-@ComponentScan(basePackages = "projetFilRouge") 
+@ComponentScan(basePackages = "filrouge") 
 @EnableJpaRepositories(basePackages = "projetFilRouge")
 @EnableScheduling
 public class SpringConfig {
