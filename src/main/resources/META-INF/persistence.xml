@@ -5,6 +5,7 @@
     <class>filrouge.entity.Article</class>
     <class>filrouge.entity.Journaliste</class>
     <class>filrouge.entity.Utilisateur</class>
+    <class>filrouge.entity.Comment</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/projetFilRouge"/>
