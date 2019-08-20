@@ -8,11 +8,11 @@
     <class>filrouge.entity.Comment</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/projetFilRouge"/>
-      <property name="javax.persistence.jdbc.user" value="projetFilRouge"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/projetfilrouge"/>
+      <property name="javax.persistence.jdbc.user" value="projetfilrouge"/>
       <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
-      <property name="javax.persistence.jdbc.password" value="projetFilRouge"/>
-      <property name="javax.persistence.schema-generation.database.action" value="create"/>
+      <property name="javax.persistence.jdbc.password" value="projetfilrouge"/>
+      <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
     </properties>
   </persistence-unit>
 </persistence>

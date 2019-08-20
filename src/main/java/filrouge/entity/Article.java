@@ -12,6 +12,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -32,11 +34,9 @@ public class Article implements Serializable {
     }
     
     
-//     // MappedBy pour dire que la liste film pointe vers la liste réalisateur et qu'ils ont la table intermédiaire commune
-//    @ManyToMany(mappedBy = "realisateurs")
-//    private List<Film> films = new ArrayList<>();
-    
-    
+    @ManyToOne
+    @JoinColumn
+    private Journaliste journaliste;
     
     
     @Temporal(TemporalType.TIMESTAMP)
