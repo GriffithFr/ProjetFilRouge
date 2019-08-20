@@ -23,7 +23,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 //@SpringBootApplication
 //@EnableAutoConfiguration
 @ComponentScan(basePackages = "filrouge") 
-@EnableJpaRepositories(basePackages = "projetFilRouge")
+@EnableJpaRepositories(basePackages = "filrouge")
 @EnableScheduling
 public class SpringConfig {
 
