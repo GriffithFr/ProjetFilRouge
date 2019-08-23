@@ -34,6 +34,23 @@ public class Utilisateur implements Serializable {
     private String userPassword;
     private String userPhoto;    
     private String userTags;
+    private Boolean estJournaliste;
+
+    public Boolean getEstJournaliste() {
+        return estJournaliste;
+    }
+
+    public void setEstJournaliste(Boolean estJournaliste) {
+        this.estJournaliste = estJournaliste;
+    }
+
+    public List<Article> getArticles() {
+        return articles;
+    }
+
+    public void setArticles(List<Article> articles) {
+        this.articles = articles;
+    }
     
     @OneToMany(mappedBy = "utilisateur")
     private List<Comment> comments = new ArrayList<>();
