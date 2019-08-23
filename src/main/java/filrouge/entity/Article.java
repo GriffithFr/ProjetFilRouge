@@ -34,12 +34,13 @@ public class Article implements Serializable {
 
     
     
-    @ManyToOne
-    @JoinColumn
-    private Journaliste journaliste;
+ 
     
     @OneToMany(mappedBy = "article")
     private List<Comment> comments = new ArrayList<>();
+    
+    @ManyToOne
+    private Utilisateur utilisateur;
     
     
     @Temporal(TemporalType.TIMESTAMP)
@@ -75,6 +76,7 @@ public class Article implements Serializable {
     private String articlePhoto3;
     
     
+    
     public Long getId() {
         return id;
     }
@@ -106,6 +108,119 @@ public class Article implements Serializable {
     @Override
     public String toString() {
         return "filrouge.entity.Article[ id=" + id + " ]";
+    }
+
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
+
+    public Date getArticleDate() {
+        return articleDate;
+    }
+
+    public void setArticleDate(Date articleDate) {
+        this.articleDate = articleDate;
+    }
+
+    public String getArticleTags() {
+        return articleTags;
+    }
+
+    public void setArticleTags(String articleTags) {
+        this.articleTags = articleTags;
+    }
+
+    public String getArticleMainTitle() {
+        return articleMainTitle;
+    }
+
+    public void setArticleMainTitle(String articleMainTitle) {
+        this.articleMainTitle = articleMainTitle;
+    }
+
+    public String getArticleMainPhoto() {
+        return articleMainPhoto;
+    }
+
+    public void setArticleMainPhoto(String articleMainPhoto) {
+        this.articleMainPhoto = articleMainPhoto;
+    }
+
+    public String getArticleTitle1() {
+        return articleTitle1;
+    }
+
+    public void setArticleTitle1(String articleTitle1) {
+        this.articleTitle1 = articleTitle1;
+    }
+
+    public String getArticleParagraph1() {
+        return articleParagraph1;
+    }
+
+    public void setArticleParagraph1(String articleParagraph1) {
+        this.articleParagraph1 = articleParagraph1;
+    }
+
+    public String getArticlePhoto1() {
+        return articlePhoto1;
+    }
+
+    public void setArticlePhoto1(String articlePhoto1) {
+        this.articlePhoto1 = articlePhoto1;
+    }
+
+    public String getArticleTitle2() {
+        return articleTitle2;
+    }
+
+    public void setArticleTitle2(String articleTitle2) {
+        this.articleTitle2 = articleTitle2;
+    }
+
+    public String getArticleParagraph2() {
+        return articleParagraph2;
+    }
+
+    public void setArticleParagraph2(String articleParagraph2) {
+        this.articleParagraph2 = articleParagraph2;
+    }
+
+    public String getArticlePhoto2() {
+        return articlePhoto2;
+    }
+
+    public void setArticlePhoto2(String articlePhoto2) {
+        this.articlePhoto2 = articlePhoto2;
+    }
+
+    public String getArticleTitle3() {
+        return articleTitle3;
+    }
+
+    public void setArticleTitle3(String articleTitle3) {
+        this.articleTitle3 = articleTitle3;
+    }
+
+    public String getArticleParagraph3() {
+        return articleParagraph3;
+    }
+
+    public void setArticleParagraph3(String articleParagraph3) {
+        this.articleParagraph3 = articleParagraph3;
+    }
+
+    public String getArticlePhoto3() {
+        return articlePhoto3;
+    }
+
+    public void setArticlePhoto3(String articlePhoto3) {
+        this.articlePhoto3 = articlePhoto3;
     }
     
 }

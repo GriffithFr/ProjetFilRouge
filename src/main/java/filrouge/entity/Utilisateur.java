@@ -8,6 +8,7 @@ package filrouge.entity;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -35,14 +36,12 @@ public class Utilisateur implements Serializable {
     private String userPassword;
     private String userPhoto;    
     private String userTags;
-//    UserMail varchar(255) NOT NULL,
-//	UserName varchar(255) NOT NULL,
-//	UserPassword varchar(255) NOT NULL,
-//	UserPhoto varchar(255),
-//	UserTags varchar(255),
     
     @OneToMany(mappedBy = "utilisateur")
     private List<Comment> comments = new ArrayList<>();
+    
+    @OneToMany(mappedBy = "utilisateur")
+    private List<Article> articles = new ArrayList<>();
             
     public Long getId() {
         return id;
@@ -51,6 +50,8 @@ public class Utilisateur implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
+    
+    
 
     @Override
     public int hashCode() {
@@ -75,6 +76,54 @@ public class Utilisateur implements Serializable {
     @Override
     public String toString() {
         return "Projet_New.User[ id=" + id + " ]";
+    }
+
+    public String getUserMail() {
+        return userMail;
+    }
+
+    public void setUserMail(String userMail) {
+        this.userMail = userMail;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getUserPassword() {
+        return userPassword;
+    }
+
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
+    }
+
+    public String getUserPhoto() {
+        return userPhoto;
+    }
+
+    public void setUserPhoto(String userPhoto) {
+        this.userPhoto = userPhoto;
+    }
+
+    public String getUserTags() {
+        return userTags;
+    }
+
+    public void setUserTags(String userTags) {
+        this.userTags = userTags;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
     }
     
 }

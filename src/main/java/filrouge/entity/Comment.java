@@ -46,6 +46,8 @@ public class Comment implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
+    
+    
 
     @Override
     public int hashCode() {
@@ -70,6 +72,38 @@ public class Comment implements Serializable {
     @Override
     public String toString() {
         return "filrouge.entity.Comment[ id=" + id + " ]";
+    }
+
+    public String getCommentContain() {
+        return commentContain;
+    }
+
+    public void setCommentContain(String commentContain) {
+        this.commentContain = commentContain;
+    }
+
+    public Date getCommentDate() {
+        return commentDate;
+    }
+
+    public void setCommentDate(Date commentDate) {
+        this.commentDate = commentDate;
+    }
+
+    public Utilisateur getUtilisateur() {
+        return utilisateur;
+    }
+
+    public void setUtilisateur(Utilisateur utilisateur) {
+        this.utilisateur = utilisateur;
+    }
+
+    public Article getArticle() {
+        return article;
+    }
+
+    public void setArticle(Article article) {
+        this.article = article;
     }
 
 }

@@ -5,6 +5,7 @@
  */
 package filrouge.main;
 
+import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 
 /**
@@ -18,6 +19,7 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+ 
         Persistence.createEntityManagerFactory("PU");
     }
     
