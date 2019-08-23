@@ -90,8 +90,10 @@ public class Utilisateur implements Serializable {
 
     @Override
     public String toString() {
-        return "Projet_New.User[ id=" + id + " ]";
+        return "Utilisateur{" + "id=" + id + ", userMail=" + userMail + ", userName=" + userName + ", userPassword=" + userPassword + '}';
     }
+
+
 
     public String getUserMail() {
         return userMail;

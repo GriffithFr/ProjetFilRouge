@@ -47,5 +47,20 @@ public class UtilisateurServiceTest {
         u.setUserPassword("1235");
         us.creerUtilisateur(u);
     }
+    
+    @Test
+    public void identifiantValide(){
+        Utilisateur u = new Utilisateur();
+        u.setUserName("Mickael");
+        u.setUserMail("mickael@mickael.mail");
+        u.setUserPassword("Bonjour12+");
+        us.creerUtilisateur(u);
+        
+        String mail = "mickael@mickael.mail";
+        String motDePasse = "Bonjour12+";
+        
+        System.out.println(us.connexion(mail, motDePasse));
+        
+    }
 
 }

@@ -38,7 +38,6 @@ public class SpringTest {
 
     @Autowired
     private ArticleDAOCrud daoA;
-
     
     @Test
     @Transactional
