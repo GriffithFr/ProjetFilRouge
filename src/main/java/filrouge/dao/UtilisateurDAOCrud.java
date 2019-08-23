@@ -15,5 +15,6 @@ import org.springframework.data.repository.CrudRepository;
  */
 public interface UtilisateurDAOCrud extends CrudRepository<Utilisateur, Long>{
     
+    public Utilisateur findByUserMailAndUserPassword(String mail, String password);
     
 }

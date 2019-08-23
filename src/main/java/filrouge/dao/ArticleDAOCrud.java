@@ -15,6 +15,10 @@ import org.springframework.data.repository.CrudRepository;
  */
 public interface ArticleDAOCrud extends CrudRepository<Article, Long>{
     
+    
+    @Override
+    List<Article> findAll();
+    
     public List<Article> findByArticleTags(String tag);
     
     public List<Article> findByUtilisateurId(Long idUtilisateur);
