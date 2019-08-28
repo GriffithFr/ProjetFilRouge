@@ -32,6 +32,14 @@ public class Article implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    public Utilisateur getUtilisateur() {
+        return utilisateur;
+    }
+
+    public void setUtilisateur(Utilisateur utilisateur) {
+        this.utilisateur = utilisateur;
+    }
+
     
     
  
@@ -46,13 +54,11 @@ public class Article implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date articleDate;
     
-    @Column(nullable = false)
     private String articleTags;
     
     @Column(nullable = false)
     private String articleMainTitle;
      
-    @Column(nullable = false)
     private String articleMainPhoto;
 
     @Column(nullable = false)

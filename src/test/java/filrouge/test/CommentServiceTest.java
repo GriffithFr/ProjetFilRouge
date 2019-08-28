@@ -22,7 +22,6 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = SpringConfig.class)
-@Rollback(false)
 @Transactional
 public class CommentServiceTest {
 

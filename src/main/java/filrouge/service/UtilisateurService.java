@@ -7,6 +7,7 @@ package filrouge.service;
 
 import filrouge.dao.UtilisateurDAOCrud;
 import filrouge.entity.Utilisateur;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +40,7 @@ public class UtilisateurService {
         // code metier
         String pwd = u.getUserPassword();
         Boolean valide = validatePassword(pwd);
+        //Boolean valide = true;
 
         if (valide) {
             //dao
@@ -67,12 +69,16 @@ public class UtilisateurService {
         daoU.delete(u);
     }
 
-    public void rechercherUtilisateurParId(Long id) {
-        daoU.findOne(id);
+    public Utilisateur rechercherUtilisateurParId(Long id) {
+        return daoU.findOne(id);
     }
 
     public Utilisateur connexion(String mail, String password) {
         return daoU.findByUserMailAndUserPassword(mail, password);
+    }
+    
+    public List<Utilisateur> rechercherTousLesUtilisateur() {
 
+        return daoU.findAll();
     }
 }
