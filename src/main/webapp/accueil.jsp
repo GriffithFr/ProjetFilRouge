@@ -12,7 +12,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="style.css">        
+        <link rel="stylesheet" href="style.css">     
+   
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -64,7 +65,7 @@
                                         <div class="card-body">
                                             <h5 class="card-title">${articleVue.articleMainTitle}</h5>
                                         <h6 class="card-subtitle mb-2 text-sm text-muted"><fmt:formatDate value="${articleVue.articleDate}" pattern="dd/MM/yyyy" /></h6>
-                                        <p class="card-text">${articleVue.articleIntroduction}</p>
+                                        <p class="card-text" maxlength="10">${articleVue.articleParagraph1}</p>
                                     </div>
 
                                     <div class="card-footer">

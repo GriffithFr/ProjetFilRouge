@@ -64,19 +64,21 @@ public class Article implements Serializable {
     @Column(nullable = false)
     private String articleTitle1;
     
-    @Column(nullable = false)
+    @Column(length = 500, nullable = false)
     private String articleParagraph1;
 
     private String articlePhoto1;
 
     private String articleTitle2;
     
+    @Column(nullable = false,length = 5000)
     private String articleParagraph2;
 
     private String articlePhoto2;
     
     private String articleTitle3;
     
+    @Column(nullable = false,length = 5000)
     private String articleParagraph3;
 
     private String articlePhoto3;

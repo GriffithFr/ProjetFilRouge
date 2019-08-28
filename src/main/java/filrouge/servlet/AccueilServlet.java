@@ -35,7 +35,6 @@ public class AccueilServlet extends AutowireServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         List<Article> art = as.rechercherTousLesArticles();
-//        SimpleDateFormat sdf=new SimpleDateFormat("dd/MM-yyyy");
       
         req.setAttribute("articles", art);
 
