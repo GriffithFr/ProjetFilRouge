@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+#TitreSite {
+    font-family: 'Pacifico', cursive;
+}
+
+.categories-droite {
+    width: -webkit-fill-available;
+}
+
+.pastilleCategorie {
+    float: right;
+}
+
+.examplenavigation {
+    float: right;
+}
+
+.panneauDroite {
+    border: 1px solid black;
+    padding: 4% !important;
+}
+
+.jumbotron {
+    background-color: red !important;
+}
+
+.paysage {
+    width: 70%;
+    height: auto;
+}
+
+.portrait {
+    width: auto;
+    height: 400px;
+}
+
+.tailleCard{
+    min-height: 100%;
+}
+.card-title {
+    text-align: justify;
+   
+}
